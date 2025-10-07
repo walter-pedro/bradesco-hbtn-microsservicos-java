@@ -12,7 +12,7 @@ public class MessageResource {
         return "BEM VINDO A AULA DE MICROSSERVIÇO USANDO SPRING BOOT !!!";
     }
 
-    @GetMapping("/login?user={user}&password={password}")
+    @GetMapping("/login")
     public String login(@RequestParam("user") String user, @RequestParam("password") String password) {
         if (user.isEmpty() || password.isEmpty()) {
             return "USUÁRIO E SENHA NÃO INFORMADOS";
