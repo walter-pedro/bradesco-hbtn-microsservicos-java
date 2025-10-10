@@ -1,0 +1,14 @@
+O que é Spring Boot Framework?
+Spring framework, é um framework Java pensado para simplificar a implementação e controle de dependencias de aplicações na linguagem
+
+Quais são os benefícios e recursos que Spring Boot fornece?
+Ele fornece bibliotecas que facilitam a implementação de aplicações java web, conexão com bancos de dados, implementação em cloud, etc
+
+Como é feita a adição de novas dependências (JPA, Hibernate, etc…) ?
+è feita via gerenciador de dependencias, como maven ou gradle
+
+Na sua opinião, qual é a melhor IDE para trabalhar com o Spring Boot: Spring Tools Suites, IntelliJ IDEA, Eclipse ou NetBeans ?
+Eu particulamente prefiro o Intellij IDEA, por sua interface e ferramentas
+
+O que é Spring Initializr?
+É uma interface web, em que é possivel selecionar diversos fatores como linguagem de programação e gerenciador de dependencias, além dos módulos do spring que deseja utilizar. Ao fim do processo é gerado um projeto para downlaod e importação na IDE.
