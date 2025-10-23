@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.exception.UserIdException;
+
 @RestController
 @RequestMapping(value = "/users")
 public class UserController {
@@ -17,7 +19,7 @@ public String findUserById(@PathVariable int id) {
    if (id > 0 && id < 100) {
     msg = "You have entered valid ID";
    } else {
-    msg = "You have entered invalid ID";
+    throw new UserIdException();
    }
 
    return msg;
