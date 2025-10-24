@@ -20,7 +20,7 @@ public class ExceptionService {
     ResponseEntity<UserNameException> handleUserNameException(UserNameException err){
         UserErrorResponse uer = new UserErrorResponse();
         uer.setStatus(HttpStatus.BAD_REQUEST.value()); 
-        uer.setMessage(err.getMessage());
+        uer.setMessage("You have entered invalid USERNAME");
         return new ResponseEntity(uer,HttpStatus.BAD_REQUEST); 
     }
 
@@ -28,7 +28,7 @@ public class ExceptionService {
     ResponseEntity<CPFException> handleCpfException(CPFException err){
         UserErrorResponse uer = new UserErrorResponse();
         uer.setStatus(HttpStatus.BAD_REQUEST.value()); 
-        uer.setMessage(err.getMessage());
+        uer.setMessage("You have entered invalid CPF");
         return new ResponseEntity(uer,HttpStatus.BAD_REQUEST); 
     }
 }

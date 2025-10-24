@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.exception.CPFException;
+import com.example.demo.exception.UserNameException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +34,7 @@ public String findUserByName(@PathVariable String userName) {
    if (userName.length() > 3 && userName.length() < 15) {
     msg = "You have entered valid USERNAME";
    } else {
-    msg = "You have entered invalid USERNAME";
+    throw new UserNameException();
    }
    return msg;
 }
@@ -44,7 +46,7 @@ public String findUserByCPF(@PathVariable String cpf) {
    if (isCPF(cpf)) {
     msg = "You have entered valid CPF";
    } else {
-    msg = "You have entered invalid CPF";
+    throw new CPFException();
    }
    return msg;
 
