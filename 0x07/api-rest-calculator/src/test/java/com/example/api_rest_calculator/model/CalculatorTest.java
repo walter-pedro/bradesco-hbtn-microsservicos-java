@@ -2,7 +2,6 @@ package com.example.api_rest_calculator.model;
 
 import com.example.calculator.model.Calculator;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 
